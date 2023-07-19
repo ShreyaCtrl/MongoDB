@@ -1,6 +1,7 @@
 const mongodb = require("mongodb");
-const uri = require("./atlas_uri");
+require('dotenv').config();
 
+const uri = process.env.MONGODB_URI;
 const MongoClient = mongodb.MongoClient;
 const client = new MongoClient(uri);
 const db = "sample_analytics";

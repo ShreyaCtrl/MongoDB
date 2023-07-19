@@ -1,7 +1,8 @@
 const { MongoClient } = require("mongodb");
-const uri = require("./atlas_uri");
+require('dotenv').config();
 
 // console.log(MongoClient);
+const uri = process.env.MONGODB_URI;
 console.log(uri);
 
 const client = new MongoClient(uri);
